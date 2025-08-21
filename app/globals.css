@@ -1,0 +1,138 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated design tokens to match plaza colors from images */
+  --background: #faf8f5;
+  --foreground: #2d2a26;
+  --card: #f5f1e8;
+  --card-foreground: #2d2a26;
+  --popover: #faf8f5;
+  --popover-foreground: #2d2a26;
+  --primary: #d4a574;
+  --primary-foreground: #ffffff;
+  --secondary: #8b7355;
+  --secondary-foreground: #ffffff;
+  --muted: #f0ead6;
+  --muted-foreground: #6b5d4f;
+  --accent: #e8a298;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e6dcc6;
+  --input: #faf8f5;
+  --ring: #d4a574;
+  --chart-1: #d4a574;
+  --chart-2: #e8a298;
+  --chart-3: #8b7355;
+  --chart-4: #c4956c;
+  --chart-5: #a68b5b;
+  --radius: 0.5rem;
+  --sidebar: #f5f1e8;
+  --sidebar-foreground: #2d2a26;
+  --sidebar-primary: #8b7355;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #d4a574;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e6dcc6;
+  --sidebar-ring: #d4a574;
+}
+
+.dark {
+  /* Updated dark mode colors to complement the plaza theme */
+  --background: #1a1611;
+  --foreground: #f5f1e8;
+  --card: #2d2a26;
+  --card-foreground: #f5f1e8;
+  --popover: #2d2a26;
+  --popover-foreground: #f5f1e8;
+  --primary: #e8a298;
+  --primary-foreground: #1a1611;
+  --secondary: #6b5d4f;
+  --secondary-foreground: #f5f1e8;
+  --muted: #3d3529;
+  --muted-foreground: #a68b5b;
+  --accent: #d4a574;
+  --accent-foreground: #1a1611;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #3d3529;
+  --input: #2d2a26;
+  --ring: #e8a298;
+  --chart-1: #e8a298;
+  --chart-2: #d4a574;
+  --chart-3: #a68b5b;
+  --chart-4: #c4956c;
+  --chart-5: #8b7355;
+  --sidebar: #2d2a26;
+  --sidebar-foreground: #f5f1e8;
+  --sidebar-primary: #6b5d4f;
+  --sidebar-primary-foreground: #f5f1e8;
+  --sidebar-accent: #e8a298;
+  --sidebar-accent-foreground: #1a1611;
+  --sidebar-border: #3d3529;
+  --sidebar-ring: #e8a298;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Typography tokens */
+  --font-heading: "Montserrat", system-ui, sans-serif;
+  --font-body: "Open Sans", system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+}
