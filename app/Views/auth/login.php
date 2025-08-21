@@ -72,31 +72,6 @@ ob_start();
     </div>
 </div>
 
-<!-- Demo Accounts Info -->
-<div class="card mt-4">
-    <div class="card__header">
-        <h3 class="card__title">Demo Accounts</h3>
-    </div>
-    <div class="card__body">
-        <div class="grid grid--cols-3">
-            <div>
-                <h4 class="font-semibold">Super Admin</h4>
-                <p class="text-sm">admin@megaplaza.com</p>
-                <p class="text-sm text-muted">password</p>
-            </div>
-            <div>
-                <h4 class="font-semibold">Manager</h4>
-                <p class="text-sm">manager1@megaplaza.com</p>
-                <p class="text-sm text-muted">password</p>
-            </div>
-            <div>
-                <h4 class="font-semibold">Tenant</h4>
-                <p class="text-sm">tenant1@example.com</p>
-                <p class="text-sm text-muted">password</p>
-            </div>
-        </div>
-    </div>
-</div>
 
 <?php
 $content = ob_get_clean();
